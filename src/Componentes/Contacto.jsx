@@ -116,7 +116,7 @@ const Footer = () => {
                     </IconButton>
                     </Typography>
                     <Typography align="center" style={{marginBottom:"20px"}} >
-                        contacto@puertoweb.cl    
+                        contacto@clinicaalmendral.cl    
                     </Typography>
                 </Grid>
                 <Grid xs={12} sm={4}>
@@ -127,7 +127,7 @@ const Footer = () => {
                     </Typography>
                     <Typography   align="center" style={{marginBottom:"20px"}} >    
                    
-                            Dimalow 231, Cerro alegre,Valparaiso
+                    Esmeralda 286, Oficina 2-B ,Los Andes
                     </Typography>
                 </Grid>
                 <Grid xs={12} sm={4}>
@@ -137,8 +137,12 @@ const Footer = () => {
                     </IconButton>
                     </Typography>
                     <Typography align="center"  style={{marginBottom:"20px"}}>
-                        (56) 9 7622 6068
+                        (34) 242 0826
                     </Typography>
+                    <Typography align="center"  style={{marginBottom:"20px"}}>
+                        (56) 9 9542 5684
+                    </Typography>
+                    
                 </Grid>
 
                 <Grid xs={12}>
