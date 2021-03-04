@@ -96,7 +96,7 @@ const Footer = () => {
         const clases=useStyle()
 
     return (
-        <div name="contacto" className={clases.fondo}>
+        <div name="contacto" style={{paddingTop:"150px"}} className={clases.fondo}>
             
             <Grid container>
 

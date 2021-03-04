@@ -59,6 +59,8 @@ const Reservar = () => {
                 <Typography variant="h5" align="center">
                     <Button variant="contained"
                     endIcon={<Evento></Evento>}
+
+                    href="https://e9ce63006869ea140e20053ac15620ffc8ee3a0b.agenda.softwaredentalink.com/agendas/agendamiento " target="_blank"
                     >
                         solicitar cita
                     </Button>

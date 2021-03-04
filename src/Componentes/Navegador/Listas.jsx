@@ -61,7 +61,7 @@ const Listas = (props) => {
                
 
               
-                <Link to="nosotros" smooth={true} duration={0} onClick={props.onClose} >
+                <Link to="servicios" smooth={true} duration={0} onClick={props.onClose} >
 
                 <ListItem button >
                     
@@ -78,25 +78,38 @@ const Listas = (props) => {
                 </ListItem> 
                 </Link>
 
-                <Link to="servicios" smooth={true} duration={0} onClick={props.onClose} >
+                <Link to="especialidades" smooth={true} duration={0} onClick={props.onClose} >
                 <ListItem  button>
                     <ListItemIcon>
                       <Equipo className={clases.colico}></Equipo>
                     </ListItemIcon>
                     <ListItemText>
-                        Servicios
+                        Especialidades
                         
                     </ListItemText>
                 </ListItem>
                 </Link> 
-                <Link to="portafolio" smooth={true} duration={0} onClick={props.onClose} >
+                <Link to="equipo" smooth={true} duration={0} onClick={props.onClose} >
 
                 <ListItem  button>
                     <ListItemIcon>
                         <Servicio className={clases.colico}></Servicio>
                     </ListItemIcon>
                     <ListItemText>
-                        Implantologia Oral              
+                        Equipo Clinico        
+                    </ListItemText>
+                </ListItem>
+                </Link>
+
+
+                <Link to="ubicacion" smooth={true} duration={0} onClick={props.onClose} >
+                <ListItem  button>
+                    <ListItemIcon>
+                        <Room className={clases.colico}></Room>
+                    </ListItemIcon>
+                    <ListItemText>
+                        Ubicacion                                                 
+                     
                     </ListItemText>
                 </ListItem>
                 </Link>

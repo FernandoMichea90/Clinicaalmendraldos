@@ -68,10 +68,12 @@ cursor:"pointer"
     },
     
     '& button:focus':{
-      backgroundColor: "#5fced6",
-      color: "#ffffff!important "
+      color: "#2ab7a9",
+      backgroundColor: "#ffffff",
+      border: "1px solid",
+  }
 
-    },
+,
 
 
 
@@ -233,8 +235,7 @@ export default function ButtonAppBar(props) {
 
   
 
-
-
+  
 
 
   
@@ -275,7 +276,7 @@ export default function ButtonAppBar(props) {
           
 
         
-          <Link>
+          <Link to="contacto">
           <div className="divHover">
             <Typography className={classes.contacto}>
               Contactanos
@@ -286,7 +287,7 @@ export default function ButtonAppBar(props) {
           </Link>
              
           <div className="divLink" >
-              <Button  className={classes.aLink} >
+              <Button  className={classes.aLink}    href="https://e9ce63006869ea140e20053ac15620ffc8ee3a0b.agenda.softwaredentalink.com/agendas/agendamiento " target="_blank" >
               Reserva online
               </Button>
               </div>

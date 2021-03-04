@@ -279,7 +279,6 @@ useEffect(() => {
   
 
 
-  document.title="Puerto Digital"
 
 
 
@@ -320,12 +319,14 @@ useEffect(() => {
      <Cajitasdos></Cajitasdos>
      </Hidden>
 
-<div style={{margin:"150px auto"}}>
+<div name="servicios" style={{paddingTop:"150px"}}>
 <Servicios></Servicios>
 
 
 
 </div>
+
+<div name="especialidades" style={{paddingTop:"180px"}} >
 <hr className={clases.separador}></hr>
 
 
@@ -342,18 +343,20 @@ useEffect(() => {
 <Carrusel></Carrusel>
                                                                                                                     
 </div>
-
+</div>
 <div style={{margin:"150px auto"}}>
 
 <Iconos></Iconos>
 
 </div>
-<div style={{margin:"150px auto"}}>
+<div name="equipo" style={{paddingTop:"150px",paddingBottom:"150px"}}>
 <Dentistas></Dentistas>
 </div>
+<div  name="ubicacion" style={{paddingTop:"150px"}}>
 <Mapa></Mapa>
-<div  id="contacto" className="divContacto  pruebaContacto page-footer">
-<hr className={clases.separador}></hr>
+</div>
+<div   name="contacto" className="divContacto  pruebaContacto page-footer">
+<hr  className={clases.separador}></hr>
     <Contacto>
 
     </Contacto>
