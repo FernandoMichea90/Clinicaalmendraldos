@@ -25,8 +25,7 @@ const useStyles=makeStyles((theme)=>({
        
        
         [theme.breakpoints.down('xs')]: {
-            height:'53%',
-            margin:"21vh auto"
+            height:"600px"
           },
           [theme.breakpoints.up('sm')]: {
             height:'100vh',
@@ -58,7 +57,7 @@ const useStyles=makeStyles((theme)=>({
         margin:"250px auto",
         [theme.breakpoints.down("sm")]:{
             margin:"100px auto",
-            width:"70%",
+            width:"300px",
             height:"unset"
         },
         [theme.breakpoints.up("md")]:{
@@ -134,7 +133,7 @@ const useStyles=makeStyles((theme)=>({
 
 
             position: "absolute",
-            top: "28vh",
+            bottom:"-200px",
             color: "rgb(0 0 0 / 87%)",
             background: "#ddd",
             borderRadius: "6px",
@@ -156,7 +155,7 @@ const useStyles=makeStyles((theme)=>({
         [theme.breakpoints.down("sm")]:{
             position:"absolute",
              width:"100vw",
-             top:"59vh",
+             top:"400px",
              left:"0"
 
         },
@@ -181,7 +180,7 @@ const useStyles=makeStyles((theme)=>({
 
         [theme.breakpoints.down("xs")]:{
 
-            height:"111vh"
+            height:"600px"
          
         },
         [theme.breakpoints.only("sm")]:{

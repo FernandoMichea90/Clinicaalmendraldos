@@ -6,12 +6,26 @@ import {Grid, makeStyles, Typography,Button} from '@material-ui/core'
 
  const estilos=makeStyles((theme)=>({
 
+
+                root:{
+                  "&  .MuiButton-contained:hover": {
+                        boxShadow: "0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)",
+                        backgroundColor:" #d5d5d59e"
+                    }
+
+
+                },
+
+
+
          divRojo:{
                 height:"50vh",
                 width:"50vw",
                 color:"#ffffff",
                 background: "rgb(245, 0, 87)",
-                padding:"7%"
+                padding:"7%",
+                minHeight: "216px"
+
 
          },
          
@@ -29,7 +43,8 @@ import {Grid, makeStyles, Typography,Button} from '@material-ui/core'
             width:"50vw",
             color:"#ffffff",
             background: "rgb(226, 168, 46)",
-            padding:"7%"
+            padding:"7%",
+            minHeight: "216px"
 
 
 
@@ -40,7 +55,9 @@ import {Grid, makeStyles, Typography,Button} from '@material-ui/core'
             width:"50vw",
             color:"#ffffff",
             background: "rgb(34, 96, 136)",
-            padding:"7%"
+            padding:"7%",
+            minHeight: "216px"
+
 
          },
          divCalipso:{
@@ -48,7 +65,9 @@ import {Grid, makeStyles, Typography,Button} from '@material-ui/core'
             width:"50vw",
             color:"#ffffff",
             background: "rgb(95, 206, 214)",
-            padding:"7%"
+            padding:"7%",
+            minHeight: "216px"
+
 
             
          } 
@@ -61,7 +80,7 @@ const Cajitasdos = () => {
 
     const clases=estilos()
     return (
-        <div>
+        <div className={clases.root}>
 
             <Grid container>
 
