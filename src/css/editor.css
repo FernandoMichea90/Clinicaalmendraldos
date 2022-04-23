@@ -1,0 +1,26 @@
+.rdw-image-modal-size-input {
+    width: 40%;
+    height: 20px;
+    border: 1px solid #0a0a0a !important;
+    color:#0a0a0a!important;
+    border-radius: 2px;
+    font-size: 12px;
+}
+.rdw-image-modal-url-input{
+    color:#0a0a0a!important;
+}
+.rdw-editor-main {
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+textarea {
+    resize: none;
+    border: solid 1px rgb(0 0 0 / 87%)!important;
+    color: rgb(0 0 0);
+    padding-left: 5px!important;
+    width: 100%!important;
+    padding: 14px;
+    height: 140px;
+}

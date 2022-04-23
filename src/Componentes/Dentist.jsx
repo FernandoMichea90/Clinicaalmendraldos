@@ -4,37 +4,41 @@ import { Grid, Typography, makeStyles } from '@material-ui/core'
 import Sonrisa from '../imagen/corteuno.png'
 import Formulario from '../imagen/corteTres.png'
 import Dentista from '../imagen/corteDos.png'
+import DentistaTres from '../imagen/dentistTres.png'
 
 
 
-const estilos=makeStyles((theme)=>({
+const estilos = makeStyles((theme) => ({
 
-   icono:{  
+    icono: {
 
-        height:"180px",
-        margin:"auto",
-        display:"block"
+        height: "180px",
+        margin: "auto",
+        display: "block"
     },
-    margenDiv:{
+    margenDiv: {
 
-        margin:"auto 5px"
+        margin: "auto 5px"
     },
 
-    divIcono:{
+    divIcono: {
 
         padding: "32px",
-       
+
     },
-    fontTitulo:{
-        color:" #888181"
+    fontTitulo: {
+        color: " #888181"
     },
-    fontSubtitulo:{
-        color:"#9e9e9e"
+    fontSubtitulo: {
+        color: "#9e9e9e"
     },
-    fontSubtituloDos:{
-        color:"#5fced6",
-        textTransform:"uppercase"
-    }
+    fontSubtituloDos: {
+        color: "#5fced6",
+        textTransform: "uppercase"
+    },
+    imgBlancoNegro:{
+        filter: 'grayscale(100%)'
+      }
 
 
 
@@ -42,7 +46,7 @@ const estilos=makeStyles((theme)=>({
 
 const Servicios = () => {
 
-    const clases =estilos()
+    const clases = estilos()
     return (
         <div>
             <Grid container>
@@ -51,70 +55,109 @@ const Servicios = () => {
 
                         <div className={clases.divIcono}>
 
-                            <img className={clases.icono} src={Sonrisa} alt=""/>
+                            <img className={clases.icono} src={Sonrisa} alt="" />
 
                         </div>
 
 
                         <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
-                                cirujano dentista
+                            cirujano dentista
                         </Typography>
                         <Typography className={clases.fontTitulo} align="center" variant="h5">
-                                Consuelo Fernandez Escobar
+                            Paz Rios O.
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
-                                especialista en endodoncia
+                            Odontologia General y Odontopediatria
                         </Typography>
 
                     </div>
                 </Grid>
                 <Grid xs={12} md={4} >
-                                    <div className={clases.margenDiv}>
+                    <div className={clases.margenDiv}>
 
-                                    <div className={clases.divIcono}>
+                        <div className={clases.divIcono}>
 
-                                            <img className={clases.icono} src={Formulario} alt=""/>
+                            <img className={clases.icono} src={Formulario} alt="" />
 
-                                    </div>
+                        </div>
 
 
                         <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
-                                cirujano dentista
+                            cirujano dentista Rehabilitacion oral
                         </Typography>
                         <Typography className={clases.fontTitulo} align="center" variant="h5">
-                                Jocelyn Michea Marquez
+                            Jocelyn Michea Marquez
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
-                                especialista en endodoncia
+                            Especialista en Implantologia Bucomaxilofacial
+                        </Typography>
+                        <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
+                            Universidad de Valparaiso
                         </Typography>
 
                     </div>
                 </Grid>
-                <Grid  xs={12} md={4}>
-                <div className={clases.margenDiv}>
+                <Grid xs={12} md={4}>
+                    <div className={clases.margenDiv}>
 
-                <div className={clases.divIcono}>
+                        <div className={clases.divIcono}>
 
-                    <img className={clases.icono} src={Dentista} alt=""/>
+                            <img className={clases.icono +' '+ clases.imgBlancoNegro} src={DentistaTres} alt="" />
 
-                </div>
+                        </div>  
 
 
-              
-                <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
-                                cirujano dentista
+
+                        <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
+                            cirujano dentista 
                         </Typography>
                         <Typography className={clases.fontTitulo} align="center" variant="h5">
-                                Maria Jose Ibacache
+                        Gianina Picasso Yaeger
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
-                                especialista en endodoncia
+                            Especialista en Ortodoncia y Ortopedia Dentomaxilar 
+                        </Typography>
+                        <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
+                            Universidad de Chile
                         </Typography>
 
-                </div>
-                    
+
+                    </div>
+
                 </Grid>
-              </Grid>
+
+
+                <Grid xs={12} md={4}>
+
+                </Grid>
+                <Grid xs={12} md={4} >
+                    <div className={clases.margenDiv}>
+
+                        <div className={clases.divIcono}>
+
+                            <img className={clases.icono} src={Dentista} alt="" />
+
+                        </div>
+
+
+
+                        <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
+                            secretaria
+                        </Typography>
+                        <Typography className={clases.fontTitulo} align="center" variant="h5">
+                            Titi
+                        </Typography>
+                        <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
+                            Yessenia Lopez
+                        </Typography>
+
+                    </div>
+                </Grid>
+                <Grid xs={12} md={4}>
+
+                </Grid>
+
+            </Grid>
         </div>
     )
 }
