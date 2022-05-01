@@ -25,7 +25,6 @@ const CrearPagina = () => {
         erroresReturn = validar()
         if (Object.keys(erroresReturn).length) {
             Swal.fire('Error', 'la informacion esta incompleta', 'warning')
-
         } else {
             try {
                 createweb(pagina)
@@ -39,10 +38,8 @@ const CrearPagina = () => {
                 console.log(error)
             }
         }
-
     }
     const validar = () => {
-
         let errores = {}
         if (pagina.nombre.trim() == '') {
             errores.nombre = 'debes ingresar el nombre de la pagina'
@@ -52,10 +49,7 @@ const CrearPagina = () => {
         }
         seterrores(errores)
         return errores
-    }
-
-
-    
+    } 
     return (
         <div>
             <Grid container>
@@ -112,10 +106,7 @@ const CrearPagina = () => {
                             className={estilos.margenVert10}
                             fullWidth
                         ></TextField>
-
-
                     }
-
                     <Button
                         onClick={() => guardarPagina()}
                         fullWidth>
@@ -129,13 +120,7 @@ const CrearPagina = () => {
                 </Grid>
                 <Grid xs={2}></Grid>
             </Grid>
-
-
         </div>
-
-
-
     )
 }
-
 export default CrearPagina

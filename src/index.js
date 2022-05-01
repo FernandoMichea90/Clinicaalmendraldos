@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {UsuarioProvider} from './Provedores/UsuarioContext'
 
 ReactDOM.render(
   <React.StrictMode>
+    <UsuarioProvider>
     <App />
+    </UsuarioProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

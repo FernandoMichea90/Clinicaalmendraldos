@@ -6,7 +6,7 @@ const Login = () => {
     return (
         <div>
         <Grid container >
-        <Grid xs={12} md={7}>
+        <Grid  xs={false} md={7}>
             <Imagen/>
         </Grid>
         <Grid xs={12} md={5}>

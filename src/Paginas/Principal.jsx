@@ -21,39 +21,24 @@ import Cajitasdos from '../Componentes/Navegador/Cajitasdos'
 
 
 const estilos=makeStyles((theme)=>({
-
 divPadre:{
      position:"relative",
-  
-
 },
- 
 separador:{
-
   borderColor: "#5fced6",
    
     border:"1px solid",
     color: "#5fced6",
     margin:"0px"
 },
-
 fontColor:{
   color: "#5fced6"
 },
-
 fontColordos:{
   color: "#9e9e9e"
 },
 
-
-
-
-
-
 }))
-
-
-
 
 function Principal() {
 

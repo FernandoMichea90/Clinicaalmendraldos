@@ -1,7 +1,9 @@
 import { collection, getDocs, doc, getDoc, setDoc } from 'firebase/firestore'
 import { getStorage, ref,uploadBytes ,getDownloadURL} from "firebase/storage";
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import {storage} from './config'
-import {db} from './config'
+import {db,auth} from './config'
+import Swal  from 'sweetalert2';
 
 
 
@@ -94,4 +96,30 @@ export const PedirPaginaEstructura =async(ruta)=>{
         console.log(error)
         
     }
+}
+
+export const autentificacionCorreo=async(login)=>{
+ return await  signInWithEmailAndPassword(auth, login.usuario, login.contrasena)
+ .then((userCredential) => {
+   // Signed in
+   const user = userCredential.user;
+   // Swal.fire("Exito!",JSON.stringify(user),'success')
+   const response={
+    code:null,
+    mensaje:null,
+    estado:true
+    }
+    return response
+ })
+ .catch((error) => {
+   const errorCode = error.code;
+   const errorMessage = error.message;
+   const response={
+       code:errorCode,
+       mensaje:errorMessage,
+       estado:false
+   }
+   return response
+   //Swal.fire(errorCode,errorMessage,'error')
+ });
 }
