@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import{Hidden} from '@material-ui/core'
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import {Link} from 'react-scroll'
 import {animateScroll as scroll} from 'react-scroll'
 import Icono from '../../imagen/exportar.png'
-
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import {logOut as logOutFirebase} from '../../Firebase/FuncFirebase';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -157,11 +155,11 @@ cursor:"pointer"
     flexGrow: 1,
   },
   logo:{
-    maxHeight:'71px',
+    maxHeight: '71px',
       [theme.breakpoints.down('sm')]: {
         height:"5vh",
         minHeight:"34px"
-},
+    },
   },
   titleLogo:{
     textTransform:"uppercase",
@@ -188,7 +186,7 @@ divLink:{
     color: "#000000"
 },
 contacto:{
-  color: "#000000",
+    color: "#000000",
     textTransform: "uppercase",
     fontSize:"0.875rem",
     fontWeight: "700"
@@ -232,6 +230,12 @@ export default function ButtonAppBar(props) {
 
   
 
+
+
+  const logOut=()=> {
+    logOutFirebase();
+  }
+
   
 
 
@@ -257,7 +261,7 @@ export default function ButtonAppBar(props) {
           
 
        
-          <Typography className={classes.title} align="left">
+          <Typography className={classes.title} align="left" variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <IconButton onClick={()=>scroll.scrollToTop({
             duration:0,delay:0
           })} edge="start" className={classes.menuButtonDos} color="inherit" aria-label="menu">
@@ -265,7 +269,13 @@ export default function ButtonAppBar(props) {
           </IconButton>
           </Typography> 
          
-
+          <div style={{margin:"auto 20px"}}>
+            <IconButton onClick={logOut}>
+              <ExitToAppIcon
+                size="large"
+              ></ExitToAppIcon>
+            </IconButton>
+          </div>
           
 
          

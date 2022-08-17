@@ -24,7 +24,7 @@ const App = () => {
     <Router>
     <Switch>
     <Route path="/login" component={Login}></Route> 
-    {user &&
+    {user &&  
      <Route path="/admin" component={Admin}></Route>
      }
     <Route path='/' component={Principal}></Route>
