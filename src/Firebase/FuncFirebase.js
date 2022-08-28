@@ -1,6 +1,6 @@
-import { collection, getDocs, doc, getDoc, setDoc } from 'firebase/firestore'
-import { getStorage, ref, uploadBytes, getDownloadURL} from "firebase/storage";
-import {  query } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { query } from "firebase/firestore";
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { storage } from './config'
 import { db, auth } from './config'
@@ -71,11 +71,11 @@ export const getSubMenu = async () => {
     // alert('paso por aca');
     const q = query(collection(db, "SubMenu"));
     const querySnapshot = await getDocs(q);
-    const response=[];
+    const response = [];
     querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
-        response.push({id:doc.id,...doc.data()})
+        response.push({ id: doc.id, ...doc.data() })
     });
     console.log(response);
     return response
@@ -87,11 +87,11 @@ export const getPaginas = async () => {
     // alert('paso por aca');
     const q = query(collection(db, "pagina"));
     const querySnapshot = await getDocs(q);
-    const response=[];
+    const response = [];
     querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
-        response.push({id:doc.id,...doc.data()})
+        response.push({ id: doc.id, ...doc.data() })
     });
     console.log(response);
     return response
@@ -169,4 +169,26 @@ export const autentificacionCorreo = async (login) => {
             return response
             //Swal.fire(errorCode,errorMessage,'error')
         });
+}
+
+// actualizar sub menu 
+
+export const updateSubMenu = async (subMenu) => {
+    // crear la referencia a la base de datos 
+    const updateSubMenu = doc(db, "SubMenu", subMenu.id)
+    // se actualiza el sub menu
+   var response= await updateDoc(updateSubMenu, {
+        link: subMenu.link,
+        titulo: subMenu.titulo
+    }).then(() => {
+        return {
+            error: false
+        }
+    }).catch(err => {
+        console.log(err);
+        return {
+            error: true,
+        }
+    })
+    return response;
 }

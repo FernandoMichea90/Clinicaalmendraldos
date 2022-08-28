@@ -17,13 +17,13 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import Navegador from '../Componentes/Navegador'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { logOut as logOutFirebase } from '../../Firebase/FuncFirebase';
 import { animateScroll as scroll } from 'react-scroll'
 import Icono from '../../imagen/exportar.png'
-import OutsideAlerter from './OutsideAlert';
+import OutsideAlerter from '../Home/OutsideAlert';
 import { BrowserRouter as Router,Route,Switch,withRouter } from 'react-router-dom'
+import ColorBox from '../ColorBox/Index';
 import SubMenu from '../Submenu/Index';
 
 
@@ -38,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         background: "#FFFFFF",
+        boxShadow:'none',
+        borderBottom: 'solid 1px #e0e0e0',
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
             easing: theme.transitions.easing.sharp,
@@ -195,16 +197,53 @@ export default function MiniDrawer() {
                     </div>
                     <Divider />
                     <List>
-                        {['Submenu', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                        {/* {['Submenu', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem>
-                        ))}
+                        ))} */}
+
+                            <ListItem button component='a' href='/admin'>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'SubMenu'} />
+                            </ListItem>
+
+                            <ListItem button component='a' href='/admin/colorbox'>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'Carrusel'} />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'ColorBox'} />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'Nosotros'} />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'Especialiadades'} />
+                            </ListItem>
+
+                            <ListItem button>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'Servicios'} />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'Equipo Clinico'} />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon><InboxIcon /> </ListItemIcon>
+                                <ListItemText primary={'Contacto'} />
+                            </ListItem>
+                            
+                            
                     </List>
                     <Divider />
                     <List>
-                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                        {['Usuarios', 'Mi perfil'].map((text, index) => (
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />
@@ -217,8 +256,11 @@ export default function MiniDrawer() {
             <div style={{width:'100vw'}}>
             <Router>
     <Switch>
-    <div style={{ marginTop: '100px' }}>
-    <Route path="/admin" component={SubMenu}></Route> 
+    
+    <div style={{ marginTop: '65px' }}>
+    <Route path="/colorbox" component={ColorBox}></Route> 
+    <Route exact path="/admin" component={SubMenu}></Route> 
+   
     </div>
     </Switch>
     </Router>

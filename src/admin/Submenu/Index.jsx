@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { getPaginas, getSubMenu } from '../../Firebase/FuncFirebase'
 import CardSubmenu from './CardSubmenu'
+import AppBarToolBar from '../Home/Toolbar'
 
 const Index = () => {
   
@@ -21,6 +22,7 @@ const Index = () => {
       
   }
   obtenerSubMenu();
+  console.log('useEffect index')
 
   }, [])
   
@@ -29,8 +31,9 @@ const Index = () => {
   return (
 
   <div>
+    <AppBarToolBar titulo="Submenu"></AppBarToolBar>
     {SubMenu.map((item,index)=>
-      <CardSubmenu key={index} item={item}> </CardSubmenu>  
+      <CardSubmenu key={item.id} item={item} Paginas={Paginas}> </CardSubmenu>  
       )}
   </div>
   )

@@ -2,7 +2,7 @@ import React, { useContext, useEffect,useState } from 'react'
 import { BrowserRouter as Router,Route,Switch,withRouter } from 'react-router-dom'
 import Login from './admin/Login'
 import Principal from './Paginas/Principal'
-import Admin from './admin/Home/admin'
+import Admin from './admin/CrearPagina/admin'
 import { UsuarioContext } from './Provedores/UsuarioContext'
 const App = () => {
 
