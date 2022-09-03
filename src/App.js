@@ -307,11 +307,11 @@ useEffect(() => {
    <Navegador  accionAbrir={accionAbrir}  ></Navegador>
  
     <div className={clases.divPadre}>
-        <ImgPrincipal></ImgPrincipal>
+        {/* <ImgPrincipal></ImgPrincipal> */}
 
-        <Hidden mdDown>
+        {/* <Hidden mdDown>
         <Cajitas></Cajitas>
-        </Hidden>
+        </Hidden> */}
        
   </div>
      <Reservar>  </Reservar>
