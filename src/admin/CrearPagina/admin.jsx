@@ -258,7 +258,7 @@ export default function MiniDrawer() {
     <Switch>
     
     <div style={{ marginTop: '65px' }}>
-    <Route path="/colorbox" component={ColorBox}></Route> 
+    <Route path="/admin/colorbox" component={ColorBox}></Route> 
     <Route exact path="/admin" component={SubMenu}></Route> 
    
     </div>

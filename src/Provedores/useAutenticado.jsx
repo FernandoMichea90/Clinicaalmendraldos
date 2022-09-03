@@ -43,7 +43,8 @@ const useAutenticado = props => {
       await setDoc(userRef, usuarioAgregar, { merge: true })
     }
   }
-  useEffect(async () => {
+  useEffect( () => {
+    
     const unsuscribe = auth.onAuthStateChanged(user => {
       if (user) {
         //  consultar si el usuario  existe            
@@ -66,7 +67,7 @@ const useAutenticado = props => {
 
   }, [])
 
-
+ 
 
   return usuarioAutenticado
 }

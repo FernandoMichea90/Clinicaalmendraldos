@@ -81,6 +81,22 @@ export const getSubMenu = async () => {
     return response
 
 }
+
+// llamar al ColorBox
+
+export const getColorBox = async () => {
+    // alert('paso por aca');
+    const q = query(collection(db, "ColorBox"));
+    const querySnapshot = await getDocs(q);
+    const response = [];
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        response.push({ id: doc.id, ...doc.data() })
+    });
+    console.log(response);
+    return response
+}
 // llamar  a las paginas disponibles
 
 export const getPaginas = async () => {

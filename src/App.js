@@ -12,8 +12,11 @@ const App = () => {
   const [cargando,setCargando]=useState(true)
   useEffect(() => {
   if(usuario!==null){
-  setUser(usuario)
-  setCargando(false)
+  const estaesunaprueba=()=>{
+    setUser(usuario)
+    setCargando(false)
+  }
+    estaesunaprueba()
   }
   },[usuario])
 

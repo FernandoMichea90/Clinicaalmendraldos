@@ -6,9 +6,12 @@ const UsuarioProvider =(props)=>{
     const[cargando,setCargando]=useState(true)
     const user= useAutenticado()
     useEffect(()=>{
+    const estaesunaprueba=() => {
      if(user!==null){
         setCargando(false)
-     }       
+     }
+    }
+    estaesunaprueba();       
     },[user])
 
 
