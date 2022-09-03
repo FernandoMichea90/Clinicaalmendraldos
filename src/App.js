@@ -309,9 +309,9 @@ useEffect(() => {
     <div className={clases.divPadre}>
         <ImgPrincipal></ImgPrincipal>
 
-        <Hidden mdDown>
+        {/* <Hidden mdDown>
         <Cajitas></Cajitas>
-        </Hidden>
+        </Hidden> */}
        
   </div>
      <Reservar>  </Reservar>
