@@ -310,7 +310,7 @@ useEffect(() => {
         <ImgPrincipal></ImgPrincipal>
 
         <Hidden mdDown>
-        <Cajitas></Cajitas>
+        {/* <Cajitas></Cajitas> */}
         </Hidden>
        
   </div>
