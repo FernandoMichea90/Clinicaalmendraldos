@@ -70,7 +70,7 @@ const descripcion = (props) => {
             <Grid xs={10}>
 
                 <Typography     className={clases.texto}  align="center" >
-                    {props.objeto.Titulo}
+                    {props.objeto.titulo}
                 </Typography>
                 
              </Grid>
@@ -78,8 +78,8 @@ const descripcion = (props) => {
             <Grid xs={12}>
 
             <Typography     className={clases.textodos}  align="left" >
-                {props.objeto.Descripcion}
-            </Typography>
+                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </Typography>
             
             </Grid>
 
@@ -88,13 +88,12 @@ const descripcion = (props) => {
               
             </Grid>
             <Grid xs={8}>
-               
-                <Button  href={props.objeto.Pagina}  variant="contained"
+
+                <Button  variant="contained"
                     endIcon={<AddIcon></AddIcon>}
                 >
                     ver mas
                 </Button>
-              
             </Grid>
 
 

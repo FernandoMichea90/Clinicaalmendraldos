@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Grid, makeStyles } from '@material-ui/core'
 import Descripcion from './descripcion'
 import implantes from '../../imagen/implantes.png'
-import { getColorBox } from '../../Firebase/FuncFirebase'
-import BoxColorDiv from './BoxColor'
 
 const useStyles = makeStyles((theme) => ({
 
@@ -157,32 +155,59 @@ const Cajitas = () => {
    const clases = useStyles()
 
 
-  
-
-
-
    useEffect(() => {
-      const ObtenerTarjetasColor = async () => {
-         const colorBoxArray = await getColorBox();
-         setBoxColor(colorBoxArray)
-      }
-      ObtenerTarjetasColor()
-
+   
    }, [])
-
+   
 
    return (
       <div className={clases.caja}>
 
          <Grid container >
 
-            {
-               Array.isArray(BoxColor) && BoxColor.map(objeto =>
-                  <Grid xs={3}>
-                     <BoxColorDiv objeto={objeto}></BoxColorDiv>
-                  </Grid>
-               )
-            }
+
+            <Grid xs={3}>
+
+
+               <div className={clases.root}>
+                  <div className="boxuno" style={{ background: "rgb(226,168,46)" }} >
+                     <Descripcion objeto={implantes}></Descripcion>
+
+                  </div>
+               </div>
+
+            </Grid>
+            <Grid xs={3}>
+               <div className={clases.root}>
+                  <div className="boxuno" style={{ background: "rgb(95,206,214)" }}>
+
+                     <Descripcion objeto={estetica}></Descripcion>
+
+                  </div>
+               </div>
+
+            </Grid>
+            <Grid xs={3}>
+               <div className={clases.root}>
+                  <div className="boxuno" style={{ background: "#f50057" }}>
+
+                     <Descripcion objeto={ortodoncia}></Descripcion>
+                  </div>
+               </div>
+            </Grid>
+            <Grid xs={3}>
+               <div className={clases.root}>
+                  <div className="boxuno" style={{ background: "rgb(34,96,136)" }}>
+
+                     <Descripcion objeto={odontopediatra}></Descripcion>
+                  </div>
+               </div>
+            </Grid>
+
+
+
+
+
 
          </Grid>
 
