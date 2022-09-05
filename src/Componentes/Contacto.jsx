@@ -111,12 +111,12 @@ const Footer = () => {
                 </Grid>
                 <Grid xs={12} sm={4}>
                     <Typography align="center">  
-                    <IconButton href="mailto:fmicheam@gmail.com"  target="_blank" aria-label="delete">
+                    <IconButton href="mailto:clinicaalmendral@gmail.com"  target="_blank" aria-label="delete">
                         <MailIcon />
                     </IconButton>
                     </Typography>
                     <Typography align="center" style={{marginBottom:"20px"}} >
-                        contacto@clinicaalmendral.cl    
+                       clinicaalmendral@gmail.com
                     </Typography>
                 </Grid>
                 <Grid xs={12} sm={4}>
@@ -125,9 +125,11 @@ const Footer = () => {
                         <RoomIcon />
                     </IconButton>
                     </Typography>
+                    <Typography   align="center" style={{marginBottom:"10px"}} >    
+                      Esmeralda 286, Oficina 2-B, Edificio Italia
+                    </Typography>
                     <Typography   align="center" style={{marginBottom:"20px"}} >    
-                   
-                    Esmeralda 286, Oficina 2-B ,Los Andes
+                      Los Andes
                     </Typography>
                 </Grid>
                 <Grid xs={12} sm={4}>
@@ -136,11 +138,11 @@ const Footer = () => {
                         <PhoneIcon />
                     </IconButton>
                     </Typography>
-                    <Typography align="center"  style={{marginBottom:"20px"}}>
+                    <Typography align="center"  style={{marginBottom:"10px"}}>
                         (34) 242 0826
                     </Typography>
                     <Typography align="center"  style={{marginBottom:"20px"}}>
-                        (56) 9 9542 5684
+                        (56) 9 9270 2505
                     </Typography>
                     
                 </Grid>
@@ -166,7 +168,7 @@ const Footer = () => {
                                  </Grid>
                                  <Grid xs={4}>
                                  <Typography  align="center">  
-                                 <IconButton href="https://api.whatsapp.com/send?phone=56976226068&text=Hola me gustaria hacer una consulta" target="_blank" aria-label="delete">
+                                 <IconButton href="https://api.whatsapp.com/send?phone=56992702505&text=Hola me gustaria hacer una consulta" target="_blank" aria-label="delete">
                                         <WhatsAppIcon />
                                     </IconButton>
                                  </Typography>  

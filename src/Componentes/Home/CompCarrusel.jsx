@@ -10,9 +10,10 @@ const CompCarrusel = (props) => {
         height:'100%' ,
         backgroundImage: `url(${props.imagen})`,
         backgroundRepeat:'no-repeat',
-        backgroundSize:'100% auto'
-     
-
+        backgroundSize:'100% auto',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundColor:'#5fced66b'
         
     }
   return (

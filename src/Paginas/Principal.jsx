@@ -281,15 +281,15 @@ function Principal() {
       <div className={clases.divPadre}>
         <ImgPrincipal></ImgPrincipal>
 
-        <Hidden mdDown>
+        {/* <Hidden mdDown>
           <Cajitas></Cajitas>
-        </Hidden>
+        </Hidden> */}
 
       </div>
       <Reservar>  </Reservar>
-      <Hidden lgUp>
+      {/* <Hidden lgUp>
         <Cajitasdos></Cajitasdos>
-      </Hidden>
+      </Hidden> */}
 
       <div name="servicios" id='servicios' style={{ paddingTop: "150px" }}>
         <Servicios></Servicios>
@@ -298,7 +298,7 @@ function Principal() {
 
       </div>
 
-      <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} >
+      {/* <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} >
         <hr className={clases.separador}></hr>
 
 
@@ -315,8 +315,8 @@ function Principal() {
           <Carrusel></Carrusel>
 
         </div>
-      </div>
-      <div style={{ margin: "150px auto" }}>
+      </div> */}
+      <div style={{ margin: "150px auto " }}>
 
         <Iconos></Iconos>
 
@@ -340,7 +340,7 @@ function Principal() {
           <div class="col s12">
             <div class="copyright">
               <hr></hr>
-              © 2020 All Rights Reserved
+              © 2022 All Rights Reserved
             </div>
           </div>
         </div>

@@ -222,16 +222,7 @@ export default function Example(props) {
 
     var autoPlay = false;
     var timeout = 1000;
-    const imagen = "https://lh3.googleusercontent.com/KOTDJn-fHFLpog1ZoVcruQlX12cFGtyIMJqJkDCsAJT41V1cMo9B6hNlp8bF5sQsg-5t6B3Q=w1080-h608-p-no-v0"
 
-    var items = [
-        {
-            //imagen:"https://chile.travel/wp-content/uploads/2016/03/Valparaiso-sernatur-DST141.jpg"
-            //imagen:"https://storage.googleapis.com/chile-travel-static-content/2016/03/Valparaiso-sernatur-DST142.jpg"   
-            imagen: imagen
-
-        }
-    ]
 
     return (
 

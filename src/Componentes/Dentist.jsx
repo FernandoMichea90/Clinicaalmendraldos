@@ -50,29 +50,7 @@ const Servicios = () => {
     return (
         <div>
             <Grid container>
-                <Grid xs={12} md={4}>
-                    <div className={clases.margenDiv}>
-
-                        <div className={clases.divIcono}>
-
-                            <img className={clases.icono} src={Sonrisa} alt="" />
-
-                        </div>
-
-
-                        <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
-                            cirujano dentista
-                        </Typography>
-                        <Typography className={clases.fontTitulo} align="center" variant="h5">
-                            Paz Rios O.
-                        </Typography>
-                        <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
-                            Odontologia General y Odontopediatria
-                        </Typography>
-
-                    </div>
-                </Grid>
-                <Grid xs={12} md={4} >
+            <Grid xs={12} md={4} >
                     <div className={clases.margenDiv}>
 
                         <div className={clases.divIcono}>
@@ -97,6 +75,30 @@ const Servicios = () => {
 
                     </div>
                 </Grid>
+                
+                <Grid xs={12} md={4}>
+                    <div className={clases.margenDiv}>
+
+                        <div className={clases.divIcono}>
+
+                            <img className={clases.icono} src={Sonrisa} alt="" />
+
+                        </div>
+
+
+                        <Typography className={clases.fontSubtituloDos} align="center" variant="subtitle1">
+                            cirujano dentista
+                        </Typography>
+                        <Typography className={clases.fontTitulo} align="center" variant="h5">
+                            Paz Rios O.
+                        </Typography>
+                        <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
+                            Odontologia General y Odontopediatria
+                        </Typography>
+
+                    </div>
+                </Grid>
+              
                 <Grid xs={12} md={4}>
                     <div className={clases.margenDiv}>
 
