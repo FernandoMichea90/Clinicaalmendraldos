@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { Grid, makeStyles } from '@material-ui/core'
+import React,{useState,useEffect} from 'react'
+import { makeStyles } from '@material-ui/core'
 import Descripcion from './descripcion'
-import implantes from '../../imagen/implantes.png'
-import { getColorBox } from '../../Firebase/FuncFirebase'
-import BoxColorDiv from './BoxColor'
 
 const useStyles = makeStyles((theme) => ({
-
-
    root: {
-
-
       position: "absolute",
       bottom: "0",
       height: "150px",
@@ -113,88 +106,63 @@ const useStyles = makeStyles((theme) => ({
 
    },
 
-
-
-
-
-
-
 }))
 
-const Cajitas = () => {
-
-   const [BoxColor, setBoxColor] = useState([])
+const BoxColor = (props) => {
+   const [Color, setColor] = useState({})
+   const clases = useStyles()
+   //Seleccionar color 
+   const SwitchColorBox = (color) => {
+      let Color;
+      switch (color.trim()) {
+         case "rojo":
+            Color = {
+               imagen: './imagenes/implantes.png',
+               color: "rgb(245, 0, 87)"
+            }
+            break;
+         case "azul":
+            Color = {
+               imagen: './imagenes/implantes.png',
+               color: "rgb(34, 96, 136)"
+            }
+            break;
+         case "celeste":
+            Color = {
+               imagen: './imagenes/implantes.png',
+               color: 'rgb(95, 206, 214)'
+            }
+            break;
+         case "amarillo":
+            Color = {
+               color: "rgb(226, 168, 46)",
+               imagen: './imagenes/implantes.png'
+            }
+            break;
+         default:
+            break;
+      }
+      setColor({...props.objeto,...Color})
+   }
 
    const implantes = {
-      titulo: "implantes",
-      texto: "lorem ipsum",
+      titulo: props.objeto.Titulo,
+      descripcion: props.objeto.Descripcion,
       imagen: './imagenes/implantes.png'
-
-
    }
-   const estetica = {
-      titulo: "estetica",
-      texto: "lorem ipsum",
-      imagen: './imagenes/estetica.png'
-
-
-   }
-   const ortodoncia = {
-      titulo: "ortodoncia",
-      texto: "lorem ipsum",
-      imagen: './imagenes/ortodoncia.png'
-
-
-   }
-   const odontopediatra = {
-      titulo: "odontopediatria",
-      texto: "lorem ipsum",
-      imagen: './imagenes/odontopediatria.png'
-
-
-   }
-
-   const clases = useStyles()
-
-
-  
-
-
-
    useEffect(() => {
-      const ObtenerTarjetasColor = async () => {
-         const colorBoxArray = await getColorBox();
-         setBoxColor(colorBoxArray)
-      }
-      ObtenerTarjetasColor()
-
+      SwitchColorBox(props.objeto.id);
    }, [])
 
-
    return (
-      <div className={clases.caja}>
+      <div className={clases.root}>
+         <div className="boxuno" style={{ background: Color.color }} >
+            <Descripcion objeto={Color}></Descripcion>
 
-         <Grid container >
-
-            {
-               Array.isArray(BoxColor) && BoxColor.map(objeto =>
-                  <Grid xs={3}>
-                     <BoxColorDiv objeto={objeto}></BoxColorDiv>
-                  </Grid>
-               )
-            }
-
-         </Grid>
-
+         </div>
       </div>
-
-
-
-
-
-
 
    )
 }
 
-export default Cajitas
+export default BoxColor
