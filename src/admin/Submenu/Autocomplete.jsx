@@ -43,9 +43,10 @@ export default function Grouped(props) {
         console.log(options)
         setPagina(options[0]);
       }else{
+        console.log(props.card)
         options.map(row=>{
-           if(row.Pagina==props.card.Pagina){
-
+           if(row.ruta==props.card.Pagina){
+            
               setPagina(row)
            }
         })

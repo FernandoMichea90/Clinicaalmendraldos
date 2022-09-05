@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MiniDrawer() {
     const classes = useStyles();
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -138,7 +138,7 @@ export default function MiniDrawer() {
 
 
     return (
-        <div className={classes.root}>
+        <div  className={classes.root}>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -176,7 +176,7 @@ export default function MiniDrawer() {
                     </div>
                 </Toolbar>
             </AppBar>
-            <OutsideAlerter setOpen={setOpen}>
+            {/* <OutsideAlerter setOpen={setOpen}> */}
                 <Drawer
                     variant="permanent"
                     className={clsx(classes.drawer, {
@@ -251,7 +251,7 @@ export default function MiniDrawer() {
                         ))}
                     </List>
                 </Drawer>
-            </OutsideAlerter>
+            {/* </OutsideAlerter> */}
 
             <div style={{width:'100vw'}}>
             <Router>

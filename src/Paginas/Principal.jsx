@@ -275,7 +275,7 @@ function Principal() {
 
   return (
 
-    <div >
+    <div  id="inicio">
       <Navegador accionAbrir={accionAbrir}  ></Navegador>
 
       <div className={clases.divPadre}>
@@ -321,10 +321,10 @@ function Principal() {
         <Iconos></Iconos>
 
       </div>
-      <div name="equipo" id="equipo" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
+      <div name="equipo" id="equipo_clinico" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
         <Dentistas></Dentistas>
       </div>
-      <div name="ubicacion" id="ubicacion" style={{ paddingpaddingTop: "150px" }}>
+      <div name="ubicacion" id="ubicacion" style={{ paddingTop: "150px" }}>
         <Mapa></Mapa>
       </div>
       <div name="contacto" id="contacto" className="divContacto  pruebaContacto page-footer">
