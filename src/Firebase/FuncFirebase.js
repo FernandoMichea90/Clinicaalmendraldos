@@ -208,3 +208,25 @@ export const updateSubMenu = async (subMenu) => {
     })
     return response;
 }
+// actualizar Tarjeta Color
+
+export const updateTarjetaColor = async (tarjetaColor) => {
+    // crear la referencia a la base de datos 
+    const updatetarjetaColor = doc(db, "ColorBox", tarjetaColor.id)
+    // se actualiza el sub menu
+   var response= await updateDoc(updatetarjetaColor, {
+        Pagina: tarjetaColor.link,
+        Titulo: tarjetaColor.titulo,
+        Descripcion: tarjetaColor.descripcion
+    }).then(() => {
+        return {
+            error: false
+        }
+    }).catch(err => {
+        console.log(err);
+        return {
+            error: true,
+        }
+    })
+    return response;
+}

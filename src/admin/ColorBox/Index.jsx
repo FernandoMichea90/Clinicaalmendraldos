@@ -5,15 +5,16 @@ import TarjetasColor from './TarjetasColor'
 
 const Index = () => {
   
-  const [TarjColor, setTarjColor] = useState([])
+  const [TarjColor, setTarjColor] = useState()
   const [Paginas, setPaginas] = useState([])
+  
   useEffect(() => {
 
     const ObtenerTarjetasColor = async() => {
-      const PaginasArray=await getPaginas();
       const  colorBoxArray=await getColorBox();
-      setPaginas(PaginasArray);
+      const PaginasArray=await getPaginas();
       setTarjColor(colorBoxArray);
+      setPaginas(PaginasArray);
         
     }
     ObtenerTarjetasColor();

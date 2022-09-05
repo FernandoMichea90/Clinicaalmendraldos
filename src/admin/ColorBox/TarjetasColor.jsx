@@ -10,7 +10,7 @@ import Card from './Card'
     
 
     {
-        props.TarjetasColor.map(row =><Card Paginas={props.Paginas} item={row}></Card>)
+      Array.isArray(props.TarjetasColor)&& props.TarjetasColor.map(row =><Card Paginas={props.Paginas} item={row}></Card>)
     }
     </>
   )

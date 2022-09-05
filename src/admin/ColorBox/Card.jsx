@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Autocompletar from '../Submenu/Autocomplete';
 import { useFormik, Formik } from 'formik'
 import * as yup from 'yup'
-import { updateSubMenu } from '../../Firebase/FuncFirebase';
+import { updateTarjetaColor } from '../../Firebase/FuncFirebase';
 import Swal from 'sweetalert2';
 import ColorChips from './ChipColor';
 function Copyright() {
@@ -57,13 +57,13 @@ const validationSchema = yup.object({
     titulo: yup
         .string('ingrese su titulo')
         .max(20, 'el maximo es de 20 caracteres')
-        .required('Titule es requerido'),
+        .required('Titulo es requerido'),
     descripcion: yup
         .string('ingrese su titulo')
         .max(57, 'el maximo es de 57 caracteres')
-        .required('Titule es requerido'),
+        .required('desccripcion es requerido'),
     link: yup
-        .string('ingrese su titulo')
+        .string('ingrese su link')
         .required('el link es requerido')
 });
 export default function CardColorBox(props) {
@@ -86,12 +86,13 @@ export default function CardColorBox(props) {
             // alert(JSON.stringify(values));
             setCargando(true);
             console.log(values)
+            actualizarTarjetaColor(values)
         }
     })
 
-    const actualizarSubMenu = async (subMenu) => {
+    const actualizarTarjetaColor = async (card_data) => {
         // se obtiene la respuesta 
-        var response = await updateSubMenu(subMenu);
+        var response = await updateTarjetaColor(card_data);
         console.log(response);
         if (!response.error) {
             Swal.fire(
@@ -110,7 +111,7 @@ export default function CardColorBox(props) {
 
     React.useEffect(() => {
         console.log(props.item)
-        setCard(props.TarjetasColor)
+        setCard(props.item)
         setPaginas(props.Paginas)
     }, [props.item, props.Paginas])
 
@@ -126,17 +127,16 @@ export default function CardColorBox(props) {
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            required
                             fullWidth
-                            id="Titulo"
-                            label="Titulo"
+                            id="titulo"
+                            label="titulo"
                             name="titulo"
-                            autoComplete="Titulo"
+                            autoComplete="titulo"
 
                             value={formik.values.titulo}
                             onChange={formik.handleChange}
                             error={formik.errors.titulo && Boolean(formik.errors.titulo)}
-                            helperText={formik.touched.titulo && formik.errors.titulo}
+                            helperText={Boolean(formik.errors.titulo)?formik.errors.titulo:formik.touched.titulo && formik.errors.titulo}
                         />
 
 
@@ -153,7 +153,7 @@ export default function CardColorBox(props) {
                             name='descripcion'
                             value={formik.values.descripcion}
                             error={formik.errors.descripcion && Boolean(formik.errors.descripcion)}
-                            helperText={formik.touched.descripcion && formik.errors.descripcion}
+                            helperText={ Boolean(formik.errors.descripcion)?formik.errors.descripcion:formik.touched.descripcion && formik.errors.descripcion}
                             onChange={formik.handleChange}
                         />
                         {!Cargando ?
