@@ -1,24 +1,14 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button, Typography } from '@material-ui/core'
-import { makeStyles, Grid } from '@material-ui/core'
-import logo from '../imagen/exportar.png'
-import transbank from '../imagen/transbank.png'
-import plaza from '../imagen/plaza.jpg'
+import { Paper } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import CompCarrusel from './Home/CompCarrusel'
 import Sillon from '../imagen/sillon.jpg'
 import Entrada from '../imagen/entrada.jpg'
+import Implantes_clinica from '../imagen/implantes_clinica.jpeg'
 
 
 const useStyles = makeStyles((theme) => ({
-
-
-    root: {
-
-
-    },
-
-
 
     imagenPrincipal: {
 
@@ -40,7 +30,18 @@ const useStyles = makeStyles((theme) => ({
     divPrincipal: {
         height: "100vh",
         minHeight: "600px",
-        maxHeight: "721px"
+        maxHeight: "721px",
+        [theme.breakpoints.down("sm")]: {
+            height: "50vh",
+            minHeight: "unset",
+            maxHeight: "unset",
+        },
+        [theme.breakpoints.down("xs")]: {
+            height: "30vh",
+            minHeight: "unset",
+            maxHeight: "unset",
+        },
+
 
     },
     divTransbank: {
@@ -211,7 +212,8 @@ const useStyles = makeStyles((theme) => ({
             top: "9vh",
             fontSize: "35px",
         },
-    }
+    },
+
 }
 ))
 
@@ -226,20 +228,25 @@ export default function Example(props) {
 
     return (
 
-        <div className={clases.root + " nav_relative"}>
+        <div className={clases.root }>
             <Carousel className={clases.estilo} navButtonsAlwaysVisible={false} autoPlay={autoPlay} indicators={false} timeout={timeout}>
-
+                <Paper>
+                    <div className={clases.divPrincipal}>
+                        <CompCarrusel imagen={Implantes_clinica} blanco={true}></CompCarrusel>
+                    </div>
+                </Paper>
 
                 <Paper>
-                 <div className={clases.divPrincipal}>
-                    <CompCarrusel imagen={Sillon}></CompCarrusel>
-                </div>
+                    <div className={clases.divPrincipal}>
+                        <CompCarrusel imagen={Sillon}></CompCarrusel>
+                    </div>
                 </Paper>
                 <Paper>
-                 <div className={clases.divPrincipal}>
-                    <CompCarrusel imagen={Entrada}></CompCarrusel>
-                </div>
+                    <div className={clases.divPrincipal}>
+                        <CompCarrusel imagen={Entrada}></CompCarrusel>
+                    </div>
                 </Paper>
+
 
             </Carousel>
 

@@ -13,7 +13,7 @@ const CompCarrusel = (props) => {
         backgroundSize:'100% auto',
         // backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
-        backgroundColor:'#5fced66b'
+        backgroundColor:props.blanco ?'#ffffff':'#5fced66b'
         
     }
   return (

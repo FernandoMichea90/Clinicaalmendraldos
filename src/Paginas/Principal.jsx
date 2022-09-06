@@ -23,7 +23,7 @@ import Cajitasdos from '../Componentes/Navegador/Cajitasdos'
 const estilos = makeStyles((theme) => ({
   divPadre: {
     position: "relative",
-    marginTop:'94px'
+    marginTop: '94px'
   },
   separador: {
     borderColor: "#5fced6",
@@ -276,7 +276,7 @@ function Principal() {
 
   return (
 
-    <div  id="inicio">
+    <div id="inicio">
       <Navegador accionAbrir={accionAbrir}  ></Navegador>
 
       <div className={clases.divPadre}>
@@ -299,7 +299,7 @@ function Principal() {
 
       </div>
 
-      {/* <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} >
+      <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} >
         <hr className={clases.separador}></hr>
 
 
@@ -316,7 +316,7 @@ function Principal() {
           <Carrusel></Carrusel>
 
         </div>
-      </div> */}
+      </div>
       <div style={{ margin: "150px auto " }}>
 
         <Iconos></Iconos>
