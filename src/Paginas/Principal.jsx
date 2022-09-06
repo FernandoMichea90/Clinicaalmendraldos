@@ -291,7 +291,9 @@ function Principal() {
       {/* <Hidden lgUp>
         <Cajitasdos></Cajitasdos>
       </Hidden> */}
-
+       <div name="equipo" id="equipo_clinico" style={{ paddingTop: "150px" }}>
+        <Dentistas></Dentistas>
+      </div>
       <div name="servicios" id='servicios' style={{ paddingTop: "150px" }}>
         <Servicios></Servicios>
 
@@ -322,9 +324,7 @@ function Principal() {
         <Iconos></Iconos>
 
       </div>
-      <div name="equipo" id="equipo_clinico" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
-        <Dentistas></Dentistas>
-      </div>
+     
       <div name="ubicacion" id="ubicacion" style={{ paddingTop: "150px" }}>
         <Mapa></Mapa>
       </div>

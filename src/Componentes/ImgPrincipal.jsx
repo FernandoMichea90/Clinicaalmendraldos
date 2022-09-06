@@ -222,7 +222,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Example(props) {
     const clases = useStyles();
 
-    var autoPlay = false;
+    var autoPlay = true;
     var timeout = 1000;
 
 
