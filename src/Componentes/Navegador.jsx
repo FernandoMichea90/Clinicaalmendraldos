@@ -134,6 +134,7 @@ cursor:"pointer"
   }
 },
       barra:{
+        height:'94px',
         background:"#FFFFFF",
         color:"#ffffff",
         boxShadow:"none",
@@ -161,10 +162,10 @@ cursor:"pointer"
   },
   logo:{
     maxHeight:'71px',
-      [theme.breakpoints.down('sm')]: {
-        height:"5vh",
-        minHeight:"34px"
-},
+//       [theme.breakpoints.down('sm')]: {
+//         height:"5vh",
+//         minHeight:"34px"
+// },
   },
   titleLogo:{
     textTransform:"uppercase",

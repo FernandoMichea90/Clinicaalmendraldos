@@ -172,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
 
         [theme.breakpoints.down("xs")]: {
 
-            height: "600px",
+            // height: "600px",
         }
     }, imagenEntrada: {
 
@@ -226,7 +226,7 @@ export default function Example(props) {
 
     return (
 
-        <div className={clases.root}>
+        <div className={clases.root + " nav_relative"}>
             <Carousel className={clases.estilo} navButtonsAlwaysVisible={false} autoPlay={autoPlay} indicators={false} timeout={timeout}>
 
 
