@@ -83,9 +83,9 @@ const classes=useStyles()
                                             
                                             <CardActions>
                                                 
-                                            <Button className={classes.aLink} variant="contained" size="small" >
+                                            {/* <Button className={classes.aLink} variant="contained" size="small" >
                                                                 Leer MAS
-                                             </Button>
+                                             </Button> */}
                                             </CardActions>
                                         </Card>
 
@@ -112,9 +112,9 @@ const classes=useStyles()
                                                             
                                                             <CardActions>
                                                                
-                                                            <Button className={classes.aLink} variant="contained" size="small" >
+                                                            {/* <Button className={classes.aLink} variant="contained" size="small" >
                                                                 Leer MAS
-                                                                </Button>
+                                                                </Button> */}
                                                             </CardActions>
                                                         </Card>
 
@@ -144,9 +144,9 @@ const classes=useStyles()
                                             
                                             <CardActions>
                                               
-                                            <Button className={classes.aLink} variant="contained" size="small" >
+                                            {/* <Button className={classes.aLink} variant="contained" size="small" >
                                                                 Leer MAS
-                                                                </Button>
+                                                                </Button> */}
                                             </CardActions>
                                         </Card>
 
