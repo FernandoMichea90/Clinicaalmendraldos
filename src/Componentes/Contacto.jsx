@@ -178,7 +178,7 @@ const Footer = () => {
                 </Grid>
                 <Grid xs={12}>
                 <Typography align="center" style={{margin:"20px 0px 80px 0px"}}>
-                Horarios : Lunes a viernes | 09:30 a 13:45 |16:00 a 21:00| Sabado | 9:30 a 13:45
+                Horarios : Lunes a viernes | 09:30 a 13:45 |16:00 a 21:00
                 </Typography>
                 </Grid>
             </Grid>

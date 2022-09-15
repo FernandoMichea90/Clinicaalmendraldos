@@ -291,18 +291,10 @@ function Principal() {
       {/* <Hidden lgUp>
         <Cajitasdos></Cajitasdos>
       </Hidden> */}
-       <div name="equipo" id="equipo_clinico" style={{ paddingTop: "150px" }}>
-        <Dentistas></Dentistas>
-      </div>
-      <div name="servicios" id='servicios' style={{ paddingTop: "150px" }}>
-        <Servicios></Servicios>
+      {/* <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} > */}
 
-
-
-      </div>
-
-      <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} >
-        <hr className={clases.separador}></hr>
+      <div name="especialidades" id='especialidades' style={{ paddingTop: "150px" }} >
+        {/* <hr className={clases.separador}></hr> */}
 
 
         <Typography className={clases.fontColor} align="center" variant="h5" >
@@ -319,12 +311,25 @@ function Principal() {
 
         </div>
       </div>
-      <div style={{ margin: "150px auto " }}>
+
+        
+      <div style={{ margin: "100px auto " }}>
 
         <Iconos></Iconos>
 
       </div>
      
+       <div name="equipo" id="equipo_clinico" style={{ paddingTop: "150px" }}>
+        <Dentistas></Dentistas>
+      </div>
+      <div name="servicios" id='servicios' style={{ paddingTop: "150px" }}>
+        <Servicios></Servicios>
+
+
+
+      </div>
+
+    
       <div name="ubicacion" id="ubicacion" style={{ paddingTop: "150px" }}>
         <Mapa></Mapa>
       </div>
@@ -341,7 +346,7 @@ function Principal() {
           <div class="col s12">
             <div class="copyright">
               <hr></hr>
-              © 2022 All Rights Reserved
+              © 2022 All Rights Reserved 
             </div>
           </div>
         </div>
