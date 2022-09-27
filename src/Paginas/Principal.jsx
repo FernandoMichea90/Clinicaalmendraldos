@@ -39,6 +39,14 @@ const estilos = makeStyles((theme) => ({
     color: "#9e9e9e"
   },
 
+  cajaIntro:{
+    padding: "150px 100px",
+    [theme.breakpoints.down('sm')]:{
+      padding: "150px 20px",
+    }
+  
+  }
+
 }))
 
 function Principal() {
@@ -251,9 +259,6 @@ function Principal() {
   }
 
 
-
-
-
   useEffect(() => {
 
     var elems = document.querySelectorAll('.sidenav');
@@ -293,6 +298,28 @@ function Principal() {
       </Hidden> */}
       {/* <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} > */}
 
+      <div className={clases.cajaIntro} name="intro" id='intro' style={{ paddingTop: "150px" }} >
+        {/* <hr className={clases.separador}></hr> */}
+
+
+        <Typography className={clases.fontColor} align="center" variant="h4" paragraph={true} >
+            Sonreír con confianza  y seguridad, es calidad de vida... 
+
+        </Typography>
+
+        <Typography className={clases.fontColordos} align="center" variant="h5" paragraph={true} >
+           Nuestra odontología  se basa  en la "Bioéstetica Dental", que significa que cuidamos tú sonrisa desde la salud,
+          privilegiando  la funcionalidad  y potenciando estética.
+        </Typography>
+        <Typography className={clases.fontColordos} align="center" variant="h5" paragraph={true} >
+          Esto se logra gracias  al trabajo conjunto  de las áreas de rehabilitación oral,estética dental e implantología BucoMaxiloFacial,para lograr 
+          resultados armónicos,y altamente estéticos y funcionales. 
+        </Typography>
+
+
+      </div>
+
+
       <div name="especialidades" id='especialidades' style={{ paddingTop: "150px" }} >
         {/* <hr className={clases.separador}></hr> */}
 
@@ -302,7 +329,7 @@ function Principal() {
         </Typography>
 
         <Typography className={clases.fontColordos} align="center" variant="h4" >
-          Especialidas Odontologicas
+          Especialidades y prestaciones Odontológicas
         </Typography>
 
 

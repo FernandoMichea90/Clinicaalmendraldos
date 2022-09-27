@@ -67,7 +67,7 @@ const Servicios = () => {
                             Jocelyn Michea Marquez
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
-                            Especialista en Implantologia Bucomaxilofacial
+                            Especialista en Implantología  Bucomaxilofacial
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
                             Universidad de Valparaiso

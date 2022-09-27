@@ -280,8 +280,7 @@ export default function ButtonAppBar(props) {
           <Link to="contacto">
           <div className="divHover">
             <Typography className={classes.contacto}>
-              Contactanos
-
+             Contáctanos
             </Typography>
             <div className="subrayado"></div>
           </div>

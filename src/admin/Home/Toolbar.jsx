@@ -36,7 +36,13 @@ export default function ButtonAppBar(props) {
           <Typography variant="h6" className={classes.title}>
             {props.titulo}
           </Typography>
-          {/* <Button color="inherit">Create</Button> */}
+
+            {
+              props.button && <Button variant="contained" color="primary" onClick={props.funcionBoton}>Create</Button>
+
+
+            }
+            
         </Toolbar>
       </AppBar>
     </div>

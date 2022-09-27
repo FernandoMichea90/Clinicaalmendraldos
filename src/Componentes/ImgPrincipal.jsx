@@ -3,8 +3,8 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core'
 import CompCarrusel from './Home/CompCarrusel'
-import Sillon from '../imagen/sillon.jpg'
-import Entrada from '../imagen/entrada.jpg'
+import Entrada_dos from '../imagen/entrada_dos.jpeg'
+import Sillon_dos from '../imagen/sillon_dos.jpeg'
 import Implantes_clinica from '../imagen/implantes_clinica.jpeg'
 
 
@@ -238,12 +238,12 @@ export default function Example(props) {
 
                 <Paper>
                     <div className={clases.divPrincipal}>
-                        <CompCarrusel imagen={Sillon}></CompCarrusel>
+                        <CompCarrusel imagen={Entrada_dos}></CompCarrusel>
                     </div>
                 </Paper>
                 <Paper>
                     <div className={clases.divPrincipal}>
-                        <CompCarrusel imagen={Entrada}></CompCarrusel>
+                        <CompCarrusel imagen={Sillon_dos}></CompCarrusel>
                     </div>
                 </Paper>
 

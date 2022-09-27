@@ -1,4 +1,4 @@
-import { collection, getDocs, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
+import { collection,addDoc, getDocs, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { query } from "firebase/firestore";
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
@@ -41,7 +41,7 @@ export default {
     },
     //Salir de la pagina 
 }
-
+// Crear carrusel 
 export const CrearPagina = async (Objeto) => {
     console.log(Objeto)
     try {
@@ -229,4 +229,50 @@ export const updateTarjetaColor = async (tarjetaColor) => {
         }
     })
     return response;
+}
+
+
+// Crear carrusel 
+export const createCarrusel = async (Objeto) => {
+    console.log(Objeto)
+    let error={error:false};
+    try {
+        const docRef = await addDoc(collection(db, 'Carrusel'), Objeto)
+        console.log(docRef.id)
+        return {error:false,id:docRef.id}
+
+    } catch (error) {
+        console.log(error)
+        return {error:true,id:0}
+    }
+
+}
+
+// subir imagen e id
+
+export const SubirImagenConId = async (file,id) => {
+    try {
+        console.log(file.type)
+        const storageRef = ref(storage, 'prueba')
+        const metadata = {
+            contentType: file.type,
+        };
+        uploadBytes(storageRef, file, metadata).then((snapshot) => {
+            console.log('imagen subida')
+
+        }).catch(error => {
+            console.log(error)
+        })
+        console.log('descargar url')
+        const sendUrl = getDownloadURL(ref(storage, 'prueba'))
+            .then((url) => {
+                console.log(url)
+                return url
+            })
+        return sendUrl
+    } catch (error) {
+        console.log(error)
+    }
+
+
 }

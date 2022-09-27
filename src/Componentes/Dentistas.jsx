@@ -28,7 +28,7 @@ const Dentistas = () => {
     return (
         <div>
             <Typography className={clases.textUno} align="center"  variant="h5">
-                    Equipo  Clinico
+                    Equipo  Clínico
             </Typography>
             <Typography className={clases.textDos} align="center"  variant="h4">
                     Conozca a nuestros doctores 

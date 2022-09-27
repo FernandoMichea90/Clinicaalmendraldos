@@ -21,11 +21,10 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { logOut as logOutFirebase } from '../../Firebase/FuncFirebase';
 import { animateScroll as scroll } from 'react-scroll'
 import Icono from '../../imagen/exportar.png'
-import OutsideAlerter from '../Home/OutsideAlert';
-import { BrowserRouter as Router,Route,Switch,withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
 import ColorBox from '../ColorBox/Index';
 import SubMenu from '../Submenu/Index';
-
+import Carrusel from '../Carrusel/Index';
 
 
 
@@ -38,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         background: "#FFFFFF",
-        boxShadow:'none',
+        boxShadow: 'none',
         borderBottom: 'solid 1px #e0e0e0',
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
@@ -138,7 +137,7 @@ export default function MiniDrawer() {
 
 
     return (
-        <div  className={classes.root}>
+        <div className={classes.root}>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -177,93 +176,94 @@ export default function MiniDrawer() {
                 </Toolbar>
             </AppBar>
             {/* <OutsideAlerter setOpen={setOpen}> */}
-                <Drawer
-                    variant="permanent"
-                    className={clsx(classes.drawer, {
+            <Drawer
+                variant="permanent"
+                className={clsx(classes.drawer, {
+                    [classes.drawerOpen]: open,
+                    [classes.drawerClose]: !open,
+                })}
+                classes={{
+                    paper: clsx({
                         [classes.drawerOpen]: open,
                         [classes.drawerClose]: !open,
-                    })}
-                    classes={{
-                        paper: clsx({
-                            [classes.drawerOpen]: open,
-                            [classes.drawerClose]: !open,
-                        }),
-                    }}
-                >
-                    <div className={classes.toolbar}>
-                        <IconButton onClick={handleDrawerClose}>
-                            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                        </IconButton>
-                    </div>
-                    <Divider />
-                    <List>
-                        {/* {['Submenu', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    }),
+                }}
+            >
+                <div className={classes.toolbar}>
+                    <IconButton onClick={handleDrawerClose}>
+                        {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                    </IconButton>
+                </div>
+                <Divider />
+                <List>
+                    {/* {['Submenu', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem>
                         ))} */}
 
-                            <ListItem button component='a' href='/admin'>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'SubMenu'} />
-                            </ListItem>
+                    <ListItem button component='a' href='/admin'>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'SubMenu'} />
+                    </ListItem>
 
-                            <ListItem button component='a' href='/admin/colorbox'>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'Carrusel'} />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'ColorBox'} />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'Nosotros'} />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'Especialiadades'} />
-                            </ListItem>
+                    <ListItem button component='a' href='/admin/colorbox'>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'ColorBox'} />
+                    </ListItem>
+                    <ListItem button component='a' href='/admin/carrusel'>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'Carrusel'} />
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'Nosotros'} />
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'Especialiadades'} />
+                    </ListItem>
 
-                            <ListItem button>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'Servicios'} />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'Equipo Clinico'} />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon><InboxIcon /> </ListItemIcon>
-                                <ListItemText primary={'Contacto'} />
-                            </ListItem>
-                            
-                            
-                    </List>
-                    <Divider />
-                    <List>
-                        {['Usuarios', 'Mi perfil'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Drawer>
+                    <ListItem button>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'Servicios'} />
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'Equipo Clinico'} />
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon><InboxIcon /> </ListItemIcon>
+                        <ListItemText primary={'Contacto'} />
+                    </ListItem>
+
+
+                </List>
+                <Divider />
+                <List>
+                    {['Usuarios', 'Mi perfil'].map((text, index) => (
+                        <ListItem button key={text}>
+                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItem>
+                    ))}
+                </List>
+            </Drawer>
             {/* </OutsideAlerter> */}
 
-            <div style={{width:'100vw'}}>
-            <Router>
-    <Switch>
-    
-    <div style={{ marginTop: '65px' }}>
-    <Route path="/admin/colorbox" component={ColorBox}></Route> 
-    <Route exact path="/admin" component={SubMenu}></Route> 
-   
-    </div>
-    </Switch>
-    </Router>
+            <div style={{ width: '100vw' }}>
+                <Router>
+                    <Switch>
+
+                        <div style={{ marginTop: '65px' }}>
+                            <Route path="/admin/colorbox" component={ColorBox}></Route>
+                            <Route path="/admin/carrusel" component={Carrusel}></Route>
+                            <Route exact path="/admin" component={SubMenu}></Route>
+
+                        </div>
+                    </Switch>
+                </Router>
 
 
 

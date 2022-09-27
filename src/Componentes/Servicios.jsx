@@ -54,7 +54,7 @@ const Servicios = () => {
                         </div>
 
                         <Typography className={clases.fontTitulo} align="center" variant="h5">
-                                Atencion Personalizada
+                            Atención  Personalizada
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
                             te ofrecemos tratamiento  que se ajuste a su necesidades 

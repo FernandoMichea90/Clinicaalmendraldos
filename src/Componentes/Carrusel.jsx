@@ -101,7 +101,7 @@ const Carrusel = () => {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Implantologia Oral
+                                        Implantología  Oral
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         La opción más estética, funcional y semejante a un diente natural, para remplazar uno o más dientes ausentes, cuando estos se han perdido por diversas causas. Un implante dental es un perno metálico que reemplaza la parte de la raíz de un diente faltante.
@@ -155,7 +155,7 @@ const Carrusel = () => {
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                         Odontopediatria                           
+                                     Odontopediatría                           
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                     La odontopediatría es la rama de la odontología encargada de tratar a los niños.

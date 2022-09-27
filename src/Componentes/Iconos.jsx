@@ -23,7 +23,7 @@ const estilos=makeStyles((theme)=>({
 
         color:"#949494",
         lineHeight:"1.2",
-        margin:"14px auto"
+        margin:"14px 14px"
     }
     
 
@@ -51,8 +51,8 @@ const Iconos = () => {
 
 
                             <Grid xs={8}>
-                                <Typography className={classes.texto} variant="subtitle1" align="center">
-                            Doctores amigable
+                                <Typography className={classes.texto} variant="subtitle1" align="left">
+                            Doctores amigables
                             </Typography>
                                 </Grid>
                 </Grid>
@@ -69,7 +69,7 @@ const Iconos = () => {
     
     
                                 <Grid xs={8}>
-                                    <Typography className={classes.texto} variant="subtitle1" align="center">
+                                    <Typography className={classes.texto} variant="subtitle1" align="left">
                                     Para toda la familia 
                                 </Typography>
                                     </Grid>
@@ -89,7 +89,7 @@ const Iconos = () => {
 
 
                             <Grid xs={8}>
-                            <Typography className={classes.texto} variant="subtitle1" align="center">
+                            <Typography className={classes.texto} variant="subtitle1" align="left">
                             Promociones
                             </Typography>
                             </Grid>
@@ -109,7 +109,7 @@ const Iconos = () => {
 
 
                                 <Grid xs={8}>
-                                <Typography className={classes.texto} variant="subtitle1" align="center">
+                                <Typography className={classes.texto} variant="subtitle1" align="left">
                                 Equipo moderno
                                 </Typography>
                                 </Grid>
@@ -128,7 +128,7 @@ const Iconos = () => {
 
 
                             <Grid xs={8}>
-                                <Typography className={classes.texto} variant="subtitle1" align="center">
+                                <Typography className={classes.texto} variant="subtitle1" align="left">
                                     Oficina Comoda
                             </Typography>
                                 </Grid>
@@ -146,8 +146,8 @@ const Iconos = () => {
     
     
                                 <Grid xs={8}>
-                                    <Typography className={classes.texto} variant="subtitle1" align="center">
-                                    Ubicacion conveniente
+                                    <Typography className={classes.texto} variant="subtitle1" align="left">
+                                    Ubicación  conveniente
                                 </Typography>
                                     </Grid>
 
@@ -166,8 +166,8 @@ const Iconos = () => {
 
 
                             <Grid xs={8}>
-                            <Typography className={classes.texto} variant="subtitle1" align="center">
-                                    Satisfaccion Garantizada
+                            <Typography className={classes.texto} variant="subtitle1" align="left">
+                                Satisfacción  Garantizada
                             </Typography>
                             </Grid>
 
@@ -186,7 +186,7 @@ const Iconos = () => {
 
 
                                 <Grid xs={8}>
-                                <Typography className={classes.texto} variant="subtitle1" align="center">
+                                <Typography className={classes.texto} variant="subtitle1" align="left">
                                         Materiales de alta calidad
                                 </Typography>
                                 </Grid>
@@ -205,7 +205,7 @@ const Iconos = () => {
 
 
                             <Grid xs={8}>
-                                <Typography className={classes.texto} variant="subtitle1" align="center">
+                                <Typography className={classes.texto} variant="subtitle1" align="left">
                                 Principales especialidades
                             </Typography>
                                 </Grid>
@@ -223,8 +223,8 @@ const Iconos = () => {
     
     
                                 <Grid xs={8}>
-                                    <Typography className={classes.texto} variant="subtitle1" align="center">
-                                    Poco o ningun tiempo de espera
+                                    <Typography className={classes.texto} variant="subtitle1" align="left">
+                                    Poco o ningún tiempo de espera
                                 </Typography>
                                     </Grid>
 
@@ -243,7 +243,7 @@ const Iconos = () => {
 
 
                             <Grid xs={8}>
-                            <Typography className={classes.texto} variant="subtitle1" align="center">
+                            <Typography className={classes.texto} variant="subtitle1" align="left">
                                 Accesibilidad
                             </Typography>
                             </Grid>
@@ -263,7 +263,7 @@ const Iconos = () => {
 
 
                                 <Grid xs={8}>
-                                <Typography className={classes.texto} variant="subtitle1" align="center">
+                                <Typography className={classes.texto} variant="subtitle1" align="left">
                                 Certificado de SEREMI
                                 </Typography>
                                 </Grid>
