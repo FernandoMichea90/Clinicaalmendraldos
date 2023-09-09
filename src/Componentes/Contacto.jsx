@@ -138,9 +138,6 @@ const Footer = () => {
                             <PhoneIcon />
                         </IconButton>
                     </Typography>
-                    <Typography align="center" style={{ marginBottom: "10px" }}>
-                        (34) 242 0826
-                    </Typography>
                     <Typography align="center" style={{ marginBottom: "20px" }}>
                         (56) 9 9270 2505
                     </Typography>
