@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Example(props) {
   const classes = useStyles();
-  const autoPlay = false;
+  const autoPlay = true;
   const timeout = 1000;
 
   // Detecta el breakpoint actual
