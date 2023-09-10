@@ -176,7 +176,7 @@ const Footer = () => {
                 <Grid xs={12}>
                     <Hidden mdDown>
                         <Typography align="center" style={{ margin: "20px 0px 80px 0px" }}>
-                            Horarios : Lunes a viernes | 09:30 a 13:45 |16:00 a 21:00
+                            Horarios : Lunes a viernes | 09:00 a 14:00 | 15:30 a 20:00
                         </Typography>
                     </Hidden>
                     <Hidden lgUp>

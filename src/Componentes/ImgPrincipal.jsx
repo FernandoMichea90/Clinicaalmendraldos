@@ -1,245 +1,61 @@
 import React from 'react';
-import Carousel from 'react-material-ui-carousel'
-import { Paper } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core'
-import CompCarrusel from './Home/CompCarrusel'
-import Entrada_dos from '../imagen/entrada_dos.jpeg'
-import Sillon_dos from '../imagen/sillon_dos.jpeg'
-import Implantes_clinica from '../imagen/implantes_clinica.jpeg'
+import Carousel from 'react-material-ui-carousel';
+import { Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import CompCarrusel from './Home/CompCarrusel';
 
 
 const useStyles = makeStyles((theme) => ({
-
-    imagenPrincipal: {
-
-        width: '100%',
-
-
-        [theme.breakpoints.down('xs')]: {
-            height: "600px"
-        },
-        [theme.breakpoints.up('sm')]: {
-            height: '100vh',
-        },
-        [theme.breakpoints.up('md')]: {
-            height: '100vh',
-            maxHeight: '810px'
-        }
-
+  root: {
+    width: '100%',
+  },
+  estilo: {
+    [theme.breakpoints.down('xs')]: {
+      // height: "600px",
     },
-    divPrincipal: {
-        height: "unset",
-
-    },
-    divTransbank: {
-        [theme.breakpoints.up("sm")]: {
-            height: "100%",
-            width: "100%",
-            position: "relative"
-        },
-
-
-    },
-    imagenTransbank: {
-        display: "block",
-        height: "150px",
-        margin: "250px auto",
-        [theme.breakpoints.down("sm")]: {
-            margin: "100px auto",
-            width: "300px",
-            height: "unset"
-        },
-        [theme.breakpoints.up("md")]: {
-            position: "absolute",
-            top: "0",
-            bottom: "0",
-            left: "0",
-            right: "0",
-            margin: "auto"
-        }
-    },
-
-    colorPrueba: {
-        color: "#f44336"
-    },
-    promocionUno: {
-
-        color: "#3f51b5",
-        background: "#ffffff99",
-        height: "300px",
-        width: "369px",
-        position: "absolute",
-        top: "25%",
-        left: "35%",
-        padding: "35px",
-        borderRadius: "25px",
-        [theme.breakpoints.down("xs")]: {
-
-            width: "93vw",
-            margin: "auto 5vw",
-            left: "0"
-
-        }, [theme.breakpoints.down("sm")]: {
-
-            width: "93vw",
-            margin: "auto auto",
-            left: "0",
-            right: "0"
-
-        }
-
-
-    },
-
-
-    boton: {
-        position: "absolute",
-        top: "57%",
-        left: "0",
-        right: "0",
-        color: "#FFFFFF",
-        borderColor: "#FFFFFF",
-        alignItems: "center",
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "100px"
-    },
-
-    divEntrada: {
-
-        [theme.breakpoints.only("sm")]: {
-            overflow: "hidden"
-        }
-
-    },
-
-
-
-    margenLogo: {
-        margin: "225px 15px 250px 10px",
-
-        [theme.breakpoints.down("xs")]: {
-
-
-            position: "absolute",
-            bottom: "-200px",
-            color: "rgb(0 0 0 / 87%)",
-            background: "#ddd",
-            borderRadius: "6px",
-            margin: "190px 15px 250px 10px",
-
-
-
-
-        }
-
-    },
-    logo: {
-        width: "88%",
-
-
-    },
-    divTres: {
-
-        [theme.breakpoints.down("sm")]: {
-            position: "absolute",
-            width: "100vw",
-            top: "400px",
-            left: "0"
-
-        },
-        [theme.breakpoints.down("xs")]: {
-            position: "absolute",
-            width: "100vw",
-            top: "38vh",
-            left: "0"
-
-        }
-    },
-    estilo: {
-
-        [theme.breakpoints.down("xs")]: {
-
-            // height: "600px",
-        }
-    }, imagenEntrada: {
-
-
-        width: "100%",
-
-        [theme.breakpoints.down("xs")]: {
-
-            height: "600px"
-
-        },
-        [theme.breakpoints.only("sm")]: {
-
-            width: "unset",
-            marginTop: "64px",
-            height: "100vh",
-            maxHeight: "801px"
-
-
-
-        }
-
-    },
-
-
-    centro: {
-        width: "100%",
-        position: "absolute",
-        fontSize: "52px",
-        textAlign: "center",
-        top: "37%",
-        fontWeight: "normal",
-        fontFamily: 'Lato',
-        color: "#ffffff",
-        [theme.breakpoints.down('sm')]: {
-            top: "9vh",
-            fontSize: "35px",
-        },
-    },
-
-}
-))
-
-
+  },
+}));
 
 export default function Example(props) {
-    const clases = useStyles();
+  const classes = useStyles();
+  const autoPlay = false;
+  const timeout = 1000;
 
-    var autoPlay = false;
-    var timeout = 1000;
+  // Detecta el breakpoint actual
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('xs'));
 
+  const carouselItems = [];
 
-    return (
+  // Mostrar imágenes para móvil
+  if (isMobile) {
+    for (let i = 1; i < 6; i++) {
+      carouselItems.push(
+        <Paper key={i}>
+          <div className={classes.divPrincipal}>
+            <CompCarrusel imagen={`./mobile/${i}.jpg`} blanco={true}></CompCarrusel>
+          </div>
+        </Paper>
+      );
+    }
+  } else {
+    // Mostrar imágenes para PC
+    for (let i = 0; i < 10; i++) {
+      carouselItems.push(
+        <Paper key={i}>
+          <div className={classes.divPrincipal}>
+            <CompCarrusel imagen={`./banner/${i}.png`} blanco={true}></CompCarrusel>
+          </div>
+        </Paper>
+      );
+    }
+  }
 
-        <div className={clases.root }>
-            <Carousel className={clases.estilo} navButtonsAlwaysVisible={false} autoPlay={autoPlay} indicators={false} timeout={timeout}>
-                <Paper>
-                    <div className={clases.divPrincipal}>
-                        <CompCarrusel imagen={Implantes_clinica} blanco={true}></CompCarrusel>
-                    </div>
-                </Paper>
-
-                <Paper>
-                    <div className={clases.divPrincipal}>
-                        <CompCarrusel imagen={Entrada_dos}></CompCarrusel>
-                    </div>
-                </Paper>
-                <Paper>
-                    <div className={clases.divPrincipal}>
-                        <CompCarrusel imagen={Sillon_dos}></CompCarrusel>
-                    </div>
-                </Paper>
-
-
-            </Carousel>
-
-
-        </div>
-
-    )
+  return (
+    <div className={classes.root}>
+      <Carousel className={classes.estilo} navButtonsAlwaysVisible={false} autoPlay={autoPlay} indicators={false} timeout={timeout}>
+        {carouselItems}
+      </Carousel>
+    </div>
+  );
 }
-

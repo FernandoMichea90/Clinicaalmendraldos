@@ -4,12 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {UsuarioProvider} from './Provedores/UsuarioContext'
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+
+const theme = createTheme();
 
 ReactDOM.render(
   <React.StrictMode>
     <UsuarioProvider>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+
     </UsuarioProvider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

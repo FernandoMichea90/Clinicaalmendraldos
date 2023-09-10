@@ -22,7 +22,7 @@ import Mapa from '../Componentes/Mapa'
 const estilos = makeStyles((theme) => ({
   divPadre: {
     position: "relative",
-    marginTop: '94px'
+    marginTop: '120px'
   },
   separador: {
     borderColor: "#5fced6",

@@ -29,7 +29,10 @@ const CompCarrusel = (props) => {
         height:"35vh"
       },
       [theme.breakpoints.down("xs")]: {
-        height:"20vh"
+        height:"65vh",
+        backgroundSize: '100% 100%',
+
+
       },
 
 
