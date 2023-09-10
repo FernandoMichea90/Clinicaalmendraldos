@@ -28,20 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     divPrincipal: {
-        height: "100vh",
-        minHeight: "600px",
-        maxHeight: "721px",
-        [theme.breakpoints.down("sm")]: {
-            height: "50vh",
-            minHeight: "unset",
-            maxHeight: "unset",
-        },
-        [theme.breakpoints.down("xs")]: {
-            height: "30vh",
-            minHeight: "unset",
-            maxHeight: "unset",
-        },
-
+        height: "unset",
 
     },
     divTransbank: {
@@ -222,7 +209,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Example(props) {
     const clases = useStyles();
 
-    var autoPlay = true;
+    var autoPlay = false;
     var timeout = 1000;
 
 

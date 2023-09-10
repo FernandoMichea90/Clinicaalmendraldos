@@ -96,7 +96,7 @@ const Footer = () => {
     const clases = useStyle()
 
     return (
-        <div name="contacto" style={{ paddingTop: "150px" }} className={clases.fondo}>
+        <div name="contacto"  className={clases.fondo}>
 
             <Grid container>
 
@@ -134,12 +134,12 @@ const Footer = () => {
                 </Grid>
                 <Grid xs={12} sm={4}>
                     <Typography align="center">
-                        <IconButton href="tel:+56-34-242-0826" target="_blank" aria-label="delete">
+                        <IconButton href="tel:+56992702505" target="_blank" aria-label="delete">
                             <PhoneIcon />
                         </IconButton>
                     </Typography>
                     <Typography align="center" style={{ marginBottom: "20px" }}>
-                        (56) 9 9270 2505
+                        (+56) 9 9270 2505
                     </Typography>
 
                 </Grid>

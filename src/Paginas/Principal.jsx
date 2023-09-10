@@ -10,14 +10,13 @@ import Contacto from '../Componentes/Contacto'
 import Cajitas from '../Componentes/Navegador/Cajitas'
 import Cajon from '../Componentes/Navegador/Cajon'
 import ImgPrincipal from "../Componentes/ImgPrincipal"
-import { makeStyles, Typography, Hidden } from "@material-ui/core"
+import { makeStyles, Typography } from "@material-ui/core"
 import Servicios from '../Componentes/Servicios'
-import Carrusel from '../Componentes/Carrusel';
+import Carrusel from '../Componentes/Carrusel/Carrusel';
 import Iconos from '../Componentes/Iconos';
 import Dentistas from '../Componentes/Dentistas';
 import Reservar from '../Componentes/Reservar';
 import Mapa from '../Componentes/Mapa'
-import Cajitasdos from '../Componentes/Navegador/Cajitasdos'
 
 
 const estilos = makeStyles((theme) => ({
@@ -36,7 +35,10 @@ const estilos = makeStyles((theme) => ({
     color: "#5fced6"
   },
   fontColordos: {
-    color: "#9e9e9e"
+    color: "#9e9e9e",
+    [theme.breakpoints.down('sm')]:{
+      fontSize: "1.1rem",
+    }
   },
 
   cajaIntro:{
@@ -334,10 +336,10 @@ function Principal() {
 
       </div>
      
-       <div name="equipo" id="equipo_clinico" style={{ paddingTop: "150px" }}>
+       <div name="equipo" id="equipo_clinico" style={{ paddingTop: "0px" }}>
         <Dentistas></Dentistas>
       </div>
-      <div name="servicios" id='servicios' style={{ paddingTop: "150px" }}>
+      <div name="servicios" id='servicios' style={{ paddingTop: "50px" }}>
         <Servicios></Servicios>
 
 
