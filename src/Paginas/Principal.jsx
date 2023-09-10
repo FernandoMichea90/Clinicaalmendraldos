@@ -40,9 +40,9 @@ const estilos = makeStyles((theme) => ({
   },
 
   cajaIntro:{
-    padding: "150px 100px",
+    padding: "50px 100px",
     [theme.breakpoints.down('sm')]:{
-      padding: "150px 20px",
+      padding: "50px 20px",
     }
   
   }
@@ -131,17 +131,7 @@ function Principal() {
 
     try {
 
-
-
-
-
-
-
       console.log(contacto.nombre);
-      console.log(error);
-
-
-
 
       if (!contacto.nombre) {
 
@@ -298,7 +288,7 @@ function Principal() {
       </Hidden> */}
       {/* <div name="especialidades" id='especialidades' style={{ paddingTop: "180px" }} > */}
 
-      <div className={clases.cajaIntro} name="intro" id='intro' style={{ paddingTop: "150px" }} >
+      <div className={clases.cajaIntro} name="intro" id='intro' >
         {/* <hr className={clases.separador}></hr> */}
 
 
@@ -308,19 +298,17 @@ function Principal() {
         </Typography>
 
         <Typography className={clases.fontColordos} align="center" variant="h5" paragraph={true} >
-           Nuestra odontología  se basa  en la "Bioéstetica Dental", que significa que cuidamos tú sonrisa desde la salud,
-          privilegiando  la funcionalidad  y potenciando estética.
+             Presentes y comprometidos con tu salud bucal desde el año 2010.
         </Typography>
         <Typography className={clases.fontColordos} align="center" variant="h5" paragraph={true} >
-          Esto se logra gracias  al trabajo conjunto  de las áreas de rehabilitación oral,estética dental e implantología BucoMaxiloFacial,para lograr 
-          resultados armónicos,y altamente estéticos y funcionales. 
+              Somos un equipo de dentistas chilenos, que trabajamos con profesionalismo, empatía y amor hacia nuestros pacientes.
         </Typography>
 
 
       </div>
 
 
-      <div name="especialidades" id='especialidades' style={{ paddingTop: "150px" }} >
+      <div name="especialidades" id='especialidades' style={{ paddingTop: "50px" }} >
         {/* <hr className={clases.separador}></hr> */}
 
 
@@ -333,7 +321,7 @@ function Principal() {
         </Typography>
 
 
-        <div style={{ margin: "150px auto" }}>
+        <div style={{ margin: "50px auto" }}>
           <Carrusel></Carrusel>
 
         </div>

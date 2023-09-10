@@ -62,7 +62,7 @@ const Reservar = () => {
 
                     href="https://e9ce63006869ea140e20053ac15620ffc8ee3a0b.agenda.softwaredentalink.com/agendas/agendamiento " target="_blank"
                     >
-                        solicitar cita
+                        Agenda aqui
                     </Button>
                 </Typography>
                 </Grid>
