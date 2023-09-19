@@ -31,7 +31,7 @@ const Dentistas = () => {
                     Equipo  Clínico
             </Typography>
             <Typography className={clases.textDos} align="center"  variant="h4">
-                    Conozca a nuestros doctores 
+                    Conozca a nuestras dentistas
             </Typography>
 
             <Typography className={clases.textTres} align="center"  variant="subtitle1">
