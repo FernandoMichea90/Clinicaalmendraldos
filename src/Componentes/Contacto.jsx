@@ -187,10 +187,10 @@ const Footer = () => {
                          Lunes a viernes 
                         </Typography>
                         <Typography align="center" style={{ margin: "20px 0px 20px 0px" }}>
-                            Mañana :  09:30 a 13:45 
+                            Mañana :  09:00 a 14:00 
                         </Typography>
                         <Typography align="center" style={{ margin: "20px 0px 20px 0px" }}>
-                            Tarde :16:00 a 21:00
+                            Tarde :  15:30 a 20:00
                         </Typography>
                        
                     </Hidden>

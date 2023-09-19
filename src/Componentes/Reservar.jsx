@@ -50,8 +50,7 @@ const Reservar = () => {
 
                     <div className={clases.divMargen}>
                     <Typography  className={clases.textUno} variant="h5" align="center">
-
-                        programa una cita para una consulta 
+                               Agenda una hora. Evaluación gratis.
                     </Typography>
                     </div>
                 </Grid>

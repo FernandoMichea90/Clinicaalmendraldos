@@ -1,5 +1,26 @@
 export const data = [
   {
+    title: "Ortodoncia Brackets",
+    descripcion:"La ortodoncia es la rama de la odontología que se encarga de los problemas de los dientes y la mandíbula. La atención dental con ortodoncia incluye el uso de dispositivos, tales como los aparatos (Brackets), para: Enderezar los dientes.",
+    imagen: "ortodoncia_brackets.jpg"
+  },
+  {
+    title: "Implantologia Oral",
+    descripcion:"La opción más estética, funcional y semejante a un diente natural, para remplazar uno o más dientes ausentes, cuando estos se han perdido por diversas causas. Un implante dental es un perno metálico que reemplaza la parte de la raíz de un diente faltante.",
+    imagen: "implantes_dentales.jpg"
+  },
+  {
+    title: "Odontologia Estética",
+    descripcion:"La Estética Dental u odontología cosmética se fundamenta en dar belleza extra a los dientes. Un buen plan de odontología estética o Estética Dental permite corregir esos pequeños defectos de manera rápida y sin traumatismos.",
+    imagen: "odontologia_estetica.jpg"  
+  },
+  {
+    title: "Odontopediatría",
+    descripcion:
+      "La odontopediatría es la encargada del manejo de la salud dental de niños y adolescentes. En esta etapa podemos prevenir y diagnosticar de forma temprana alguna patología o alteración de maloclusión.",
+    imagen: "odontopediatria.jpg",
+  },
+  {
     title: "Prótesis Fija (Corona o Puentes)",
     descripcion:
       "Tratamiento Rehabilitador que restaura la gran parte de la anatomía de la corona dental y va cementado Fijo a la raíz natural del Paciente, o atornillado o cementado a un Implante Dental. Corona o Prótesis Fija Unitaria, metal porcelana con o sin perno muñón. Puente o Prótesis Fija Plural.",
@@ -52,12 +73,6 @@ export const data = [
     descripcion:
       "Urgencias dentales, son toda problemática dental que surge en forma súbita e inesperada y necesita solución inmediata, como dolor, desalojo de restauración, fractura de un diente, etc.",
     imagen: "urgencia_dental.jpg",
-  },
-  {
-    title: "Odontopediatría",
-    descripcion:
-      "La odontopediatría es la encargada del manejo de la salud dental de niños y adolescentes. En esta etapa podemos prevenir y diagnosticar de forma temprana alguna patología o alteración de maloclusión.",
-    imagen: "odontopediatria.jpg",
   },
   {
     title: "Prótesis Removible Total",

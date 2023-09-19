@@ -1,18 +1,8 @@
 import React from 'react'
 import { Grid, Typography, makeStyles } from '@material-ui/core'
-
-import Sonrisa from '../imagen/corteuno.png'
-import Formulario from '../imagen/corteTres.png'
-import Dentista from '../imagen/corteDos.png'
-import DentistaTres from '../imagen/dentistTres.png'
-
-
-
 const estilos = makeStyles((theme) => ({
-
     icono: {
-
-        height: "180px",
+        height: "288px",
         margin: "auto",
         display: "block"
     },
@@ -20,11 +10,8 @@ const estilos = makeStyles((theme) => ({
 
         margin: "auto 5px"
     },
-
     divIcono: {
-
         padding: "32px",
-
     },
     fontTitulo: {
         color: " #888181"
@@ -39,11 +26,7 @@ const estilos = makeStyles((theme) => ({
     imgBlancoNegro:{
         filter: 'grayscale(100%)'
       }
-
-
-
 }))
-
 const Servicios = () => {
 
     const clases = estilos()
@@ -55,7 +38,7 @@ const Servicios = () => {
 
                         <div className={clases.divIcono}>
 
-                            <img className={clases.icono} src={Formulario} alt="" />
+                            <img className={clases.icono} src={process.env.PUBLIC_URL+'./img_dentista/10.png'} alt="" />
 
                         </div>
 
@@ -81,7 +64,7 @@ const Servicios = () => {
 
                         <div className={clases.divIcono}>
 
-                            <img className={clases.icono} src={Sonrisa} alt="" />
+                            <img className={clases.icono} src={process.env.PUBLIC_URL+'./img_dentista/12.png'} alt="" />
 
                         </div>
 
@@ -90,11 +73,16 @@ const Servicios = () => {
                             cirujano dentista
                         </Typography>
                         <Typography className={clases.fontTitulo} align="center" variant="h5">
-                            Paz Rios O.
+                            Paz Rios Oróstegui
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
                             Odontologia General y Odontopediatria
                         </Typography>
+                        <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
+                            Universidad de Valparaíso
+                        </Typography>
+                        
+                        
 
                     </div>
                 </Grid>
@@ -104,7 +92,7 @@ const Servicios = () => {
 
                         <div className={clases.divIcono}>
 
-                            <img className={clases.icono +' '+ clases.imgBlancoNegro} src={DentistaTres} alt="" />
+                            <img className={clases.icono}  src={process.env.PUBLIC_URL+'./img_dentista/11.png'} alt="" />
 
                         </div>  
 
@@ -114,7 +102,7 @@ const Servicios = () => {
                             cirujano dentista 
                         </Typography>
                         <Typography className={clases.fontTitulo} align="center" variant="h5">
-                        Gianina Picasso Yaeger
+                            Giannina Picasso Yaeger
                         </Typography>
                         <Typography className={clases.fontSubtitulo} align="center" variant="subtitle1">
                             Especialista en Ortodoncia y Ortopedia Dentomaxilar 
@@ -137,7 +125,7 @@ const Servicios = () => {
 
                         <div className={clases.divIcono}>
 
-                            <img className={clases.icono} src={Dentista} alt="" />
+                            <img className={clases.icono}  src={process.env.PUBLIC_URL+'./img_dentista/9.png'} alt="" />
 
                         </div>
 

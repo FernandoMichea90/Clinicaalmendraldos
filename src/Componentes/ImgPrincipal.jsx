@@ -29,7 +29,7 @@ export default function Example(props) {
 
   // Mostrar imágenes para móvil
   if (isMobile) {
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < 11; i++) {
       carouselItems.push(
         <Paper key={i}>
           <div className={classes.divPrincipal}>
